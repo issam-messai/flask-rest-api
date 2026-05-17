@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+
+# working files
+*.log
+*.db
+config.py
