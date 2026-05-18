@@ -1,7 +1,7 @@
 from flask import Flask
 
 from .extensions import appbuilder, db
-
+from .examples.api import ExampleApi
 
 def create_app() -> Flask:
     app = Flask(__name__)
@@ -11,5 +11,5 @@ def create_app() -> Flask:
         #db.create_all()
         appbuilder.init_app(app, db.session)
         # Registering the views and APIs
-        #...
+        appbuilder.add_api(ExampleApi)
     return app
